@@ -5,5 +5,5 @@
   "/industry-information/category/[category]": "pages/industry-information/category/[category].js",
   "/": "pages/index.js",
   "/cases/[slug]": "pages/cases/[slug].js",
-  "/industry-information/[category]/[slug]": "pages/industry-information/[category]/[slug].js"
+  "/cases": "pages/cases.js"
 }
