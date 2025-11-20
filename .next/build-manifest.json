@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/industry-information": [
+    "/cases/[slug]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/industry-information.js"
+      "static/chunks/pages/cases/[slug].js"
     ],
     "/industry-information/[category]/[slug]": [
       "static/chunks/webpack.js",

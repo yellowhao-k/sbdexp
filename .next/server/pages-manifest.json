@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/industry-information": "pages/industry-information.js",
   "/industry-information/category/[category]": "pages/industry-information/category/[category].js",
+  "/": "pages/index.js",
+  "/cases/[slug]": "pages/cases/[slug].js",
   "/industry-information/[category]/[slug]": "pages/industry-information/[category]/[slug].js"
 }
