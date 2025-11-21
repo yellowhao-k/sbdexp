@@ -2,8 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/industry-information/category/[category]": "pages/industry-information/category/[category].js",
-  "/": "pages/index.js",
+  "/industry-information/[category]/[slug]": "pages/industry-information/[category]/[slug].js",
+  "/industry-information": "pages/industry-information.js",
+  "/cases": "pages/cases.js",
   "/cases/[slug]": "pages/cases/[slug].js",
-  "/cases": "pages/cases.js"
+  "/industry-information/category/[category]": "pages/industry-information/category/[category].js"
 }
