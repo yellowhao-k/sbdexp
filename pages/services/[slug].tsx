@@ -28,7 +28,7 @@ export default function ServicePage({ service, mdxSource, relatedArticles, relat
   if (!service) return null;
   const title = buildMetaTitle(service.title);
   const description = buildMetaDescription(service.excerpt || service.body?.slice(0,160));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   const jsonLd = serviceJsonLd({ title: service.title, description, slug: service.slug, baseUrl });
   const orgLd = organizationJsonLd({ name: '深圳时必达国际物流', url: baseUrl, logo: `${baseUrl}/images/company.png`, phone: '135-5379-6071', address: '深圳市宝安区福永街道怀德社区路干头二巷11号楼' });
   const breadcrumbs = breadcrumbJsonLd(['services', service.slug], baseUrl);

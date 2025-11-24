@@ -24,7 +24,7 @@ export default function CaseDetail({ caseStudy, mdxSource }: { caseStudy: any; m
   if (!caseStudy) return null;
   const title = buildMetaTitle(caseStudy.title);
   const description = buildMetaDescription(caseStudy.excerpt || caseStudy.challenge || '案例详情');
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   const breadcrumbs = breadcrumbJsonLd(['cases', caseStudy.slug], baseUrl);
   const jsonLd = caseJsonLd({
     title: caseStudy.title,

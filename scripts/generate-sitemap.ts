@@ -4,7 +4,7 @@ import { writeFileSync, readdirSync, readFileSync, existsSync } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const baseUrl = process.env.SITE_BASE_URL || 'https://www.example.com';
+const baseUrl = process.env.SITE_BASE_URL || 'https://www.shipsbd.com';
 
 function collect(dir: string) {
   const full = path.join(process.cwd(), dir);

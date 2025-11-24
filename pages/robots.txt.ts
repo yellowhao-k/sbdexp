@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   const lines = [
     'User-agent: *',
     'Allow: /',

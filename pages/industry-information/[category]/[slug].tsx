@@ -34,7 +34,7 @@ export default function ArticlePage({ article, mdxSource }: { article: any; mdxS
   if (!article) return null;
   const title = buildMetaTitle(article.title);
   const description = buildMetaDescription(article.excerpt || article.body?.slice(0,160));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   const breadcrumbs = breadcrumbJsonLd(['industry-information', article.category, article.slug], baseUrl);
   const jsonLd = articleJsonLd({
     title: article.title,

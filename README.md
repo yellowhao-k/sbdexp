@@ -27,8 +27,8 @@ Create `.env.local`:
 DATABASE_URL=mysql://user:pass@host:3306/dbname
 INQUIRY_EMAIL_TO=sales@example.com
 EMAIL_API_KEY=your-sendgrid-or-resend-key
-SITE_BASE_URL=https://www.example.com
-NEXT_PUBLIC_SITE_BASE_URL=https://www.example.com
+SITE_BASE_URL=https://www.shipsbd.com
+NEXT_PUBLIC_SITE_BASE_URL=https://www.shipsbd.com
 ```
 
 ## Development

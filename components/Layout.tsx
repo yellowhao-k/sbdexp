@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { hotline, address, industryInfoLinks, caseLinks, serviceLinks } from './FooterLinks';
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.example.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   return (
     <>
       <Head>
