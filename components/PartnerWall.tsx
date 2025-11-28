@@ -4,14 +4,14 @@ interface Partner { name: string; logo: string; alt: string; href: string; }
 
 // Eight partners; we duplicate when rendering for seamless infinite scroll.
 const partners: Partner[] = [
-  { name: 'Carrier A', logo: '/images/partners/partner-1.jpg', alt: 'Carrier A 标志', href: 'https://shipsbd.com/carrier-a' },
-  { name: 'Carrier B', logo: '/images/partners/partner-2.jpg', alt: 'Carrier B 标志', href: 'https://shipsbd.com/carrier-b' },
-  { name: 'Warehouse Net', logo: '/images/partners/partner-3.jpg', alt: 'Warehouse Net 标志', href: 'https://shipsbd.com/warehouse-net' },
-  { name: 'Express X', logo: '/images/partners/partner-4.jpg', alt: 'Express X 标志', href: 'https://shipsbd.com/express-x' },
-  { name: 'Logistics Y', logo: '/images/partners/partner-5.jpg', alt: 'Logistics Y 标志', href: 'https://shipsbd.com/logistics-y' },
-  { name: 'Supply Z', logo: '/images/partners/partner-6.jpg', alt: 'Supply Z 标志', href: 'https://shipsbd.com/supply-z' },
-  { name: 'Freight Plus', logo: '/images/partners/partner-7.jpg', alt: 'Freight Plus 标志', href: 'https://shipsbd.com/freight-plus' },
-  { name: 'Global Hub', logo: '/images/partners/partner-8.jpg', alt: 'Global Hub 标志', href: 'https://shipsbd.com/global-hub' }
+  { name: 'DHL Express – 国际快递', logo: '/images/partners/partner-1.jpg', alt: 'DHL 标志', href: 'https://www.dhl.com/cn-zh/home.html' },
+  { name: 'FedEx 快递', logo: '/images/partners/partner-2.jpg', alt: 'FedEx 快递', href: 'https://www.fedex.com' },
+  { name: 'UPS 快递', logo: '/images/partners/partner-3.jpg', alt: 'UPS 快递', href: 'https://www.ups.com' },
+  { name: '中国东方航空', logo: '/images/partners/partner-4.jpg', alt: '中国东方航空', href: 'https://www.ceair.com' },
+  { name: 'TNT', logo: '/images/partners/partner-5.jpg', alt: 'TNT 标志', href: 'https://www.tnt.com' },
+  { name: 'Air China', logo: '/images/partners/partner-6.jpg', alt: 'Air China 标志', href: 'https://www.airchina.com.cn' },
+  { name: '中国东方航空', logo: '/images/partners/partner-7.jpg', alt: '中国东方航空 标志', href: 'https://www.ceair.com' },
+  { name: '中国南方航空', logo: '/images/partners/partner-8.jpg', alt: '中国南方航空 标志', href: 'https://www.csair.com' }
 ];
 
 export default function PartnerWall() {
