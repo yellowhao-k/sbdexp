@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 export default function Terms() {
   return (
-    <Layout>
+    <Layout title='服务条款| 深圳时必达国际物流'>
       <h1>服务条款</h1>
       <p>本条款适用于您使用深圳时必达国际物流提供的跨境物流与相关咨询服务。</p>
       <h2>服务范围</h2>

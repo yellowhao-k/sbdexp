@@ -16,7 +16,7 @@ export async function getStaticProps() {
 
 export default function Home({ services, cases, articles }: any) {
   return (
-    <Layout>
+    <Layout title="首页 | 深圳时必达国际物流">
       <section className="hero">
         <div className="hero-text">
           <h1>国际物流的领导者</h1>

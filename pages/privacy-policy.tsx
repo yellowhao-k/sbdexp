@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 export default function PrivacyPolicy() {
   return (
-    <Layout>
+    <Layout title='隐私政策 | 深圳时必达国际物流'>
       <h1>隐私政策</h1>
       <p>我们尊重并保护您的隐私。以下内容概述我们在跨境物流服务中收集、使用及保护个人信息的方式。</p>
       <h2>信息收集</h2>

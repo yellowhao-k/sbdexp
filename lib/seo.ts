@@ -1,5 +1,5 @@
 // Placeholder SEO helper functions
-export function buildMetaTitle(title: string, siteName = "Company Name") {
+export function buildMetaTitle(title: string, siteName = "深圳时必达跨境物流") {
   return `${title} | ${siteName}`;
 }
 

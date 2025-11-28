@@ -17,7 +17,7 @@ export default function ContactUs() {
   }
 
   return (
-    <Layout>
+    <Layout title='联系我们 | 深圳时必达国际物流'>
       <h1>联系我们</h1>
       <section className="block" style={{ display:'grid', gap:'1.4rem', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))' }}>
         <div>

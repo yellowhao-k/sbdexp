@@ -3,11 +3,12 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 import { hotline, address, industryInfoLinks, caseLinks, serviceLinks } from './FooterLinks';
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children,title = "深圳时必达国际物流 | 国际专线 · FBA头程 · 海外仓", }: { children: ReactNode; title?: string }) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
   return (
     <>
       <Head>
+        <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
