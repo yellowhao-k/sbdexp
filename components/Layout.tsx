@@ -3,25 +3,50 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 import { hotline, address, industryInfoLinks, caseLinks, serviceLinks } from './FooterLinks';
 
-export default function Layout({ children,title = "深圳时必达国际物流 | 国际专线 · FBA头程 · 海外仓", }: { children: ReactNode; title?: string }) {
+export default function Layout({
+  children,
+  title = "深圳时必达国际物流 | 国际专线 · FBA头程 · 海外仓",
+  description = "深圳时必达国际物流（SBD）专注跨境电商物流、国际空运、海派专线、FBA头程、海外仓及全球派送解决方案，为卖家提供安全、高效、稳定的一站式国际物流服务。"
+}: {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+}) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_BASE_URL || 'https://www.shipsbd.com';
+
   return (
     <>
       <Head>
         <title>{title}</title>
+
+        {/* ⭐ 新增 SEO 必需的默认 description */}
+        <meta name="description" content={description} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: '深圳时必达国际物流',
-            url: baseUrl,
-            logo: baseUrl + '/images/company.png',
-            contactPoint: [{ '@type': 'ContactPoint', telephone: '135-5379-6071', contactType: 'customer service', areaServed: 'CN' }]
-          }) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: '深圳时必达国际物流',
+              url: baseUrl,
+              logo: baseUrl + '/images/company.png',
+              contactPoint: [
+                {
+                  '@type': 'ContactPoint',
+                  telephone: '135-5379-6071',
+                  contactType: 'customer service',
+                  areaServed: 'CN'
+                }
+              ]
+            })
+          }}
         />
       </Head>
+
+      {/* --- Header --- */}
       <header>
         <div className="nav-bar">
           <div className="brand"><Link href="/">深圳时必达国际物流</Link></div>
@@ -35,7 +60,10 @@ export default function Layout({ children,title = "深圳时必达国际物流 |
           </nav>
         </div>
       </header>
+
       <main className="container">{children}</main>
+
+      {/* --- 右侧悬浮联系 --- */}
       <div className="right-contact" aria-label="快速联系">
         <ul>
           <li className="contact-item" data-type="phone">
@@ -44,6 +72,7 @@ export default function Layout({ children,title = "深圳时必达国际物流 |
             </button>
             <div className="contact-pop"><a href="tel:13553796071">13553796071</a></div>
           </li>
+
           <li className="contact-item" data-type="wechat">
             <button aria-label="微信" type="button">
               <img src="/images/icons/wechat.png" alt="" width="22" height="22" />
@@ -52,6 +81,7 @@ export default function Layout({ children,title = "深圳时必达国际物流 |
               <img src="/images/wx.png" alt="微信二维码" loading="lazy" />
             </div>
           </li>
+
           <li className="contact-item" data-type="email">
             <button aria-label="邮箱" type="button">
               <img src="/images/icons/email.png" alt="" width="22" height="22" />
@@ -60,45 +90,62 @@ export default function Layout({ children,title = "深圳时必达国际物流 |
           </li>
         </ul>
       </div>
+
+      {/* --- Footer --- */}
       <footer>
-        <div style={{ display:'grid', gap:'1.8rem', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', maxWidth:'1180px', margin:'0 auto' }}>
+        <div style={{
+          display: 'grid',
+          gap: '1.8rem',
+          gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))',
+          maxWidth: '1180px',
+          margin: '0 auto'
+        }}>
           <div>
-            <h3 style={{ margin:'0 0 .6rem', fontSize:'1rem', color:'#fff' }}>联系我们</h3>
-            <p style={{ margin:'.35rem 0', fontSize:'.75rem', color:'#cfd8dc' }}>信息热线：<a href={`tel:${hotline.replace(/-/g,'')}`} style={{ color:'#cfd8dc' }}>{hotline}</a></p>
-            <p style={{ margin:'.35rem 0', fontSize:'.75rem', color:'#cfd8dc' }}>地址：{address}</p>
-            <div style={{ marginTop:'.6rem' }}>
-              <img src="/images/wx.png" alt="微信二维码" style={{ width:'120px', height:'120px', borderRadius:'6px', border:'1px solid #2a3d4a' }} loading="lazy" />
-              <p style={{ margin:'.35rem 0 0', fontSize:'.65rem', color:'#90a4ae' }}>扫码添加企业微信</p>
+            <h3 style={{ margin: '0 0 .6rem', fontSize: '1rem', color: '#fff' }}>联系我们</h3>
+            <p style={{ margin: '.35rem 0', fontSize: '.75rem', color: '#cfd8dc' }}>
+              信息热线：<a href={`tel:${hotline.replace(/-/g, '')}`} style={{ color: '#cfd8dc' }}>{hotline}</a>
+            </p>
+            <p style={{ margin: '.35rem 0', fontSize: '.75rem', color: '#cfd8dc' }}>地址：{address}</p>
+            <div style={{ marginTop: '.6rem' }}>
+              <img src="/images/wx.png" alt="微信二维码" style={{ width: '120px', height: '120px', borderRadius: '6px', border: '1px solid #2a3d4a' }} loading="lazy" />
+              <p style={{ margin: '.35rem 0 0', fontSize: '.65rem', color: '#90a4ae' }}>扫码添加企业微信</p>
             </div>
           </div>
+
           <div>
-            <h3 style={{ margin:'0 0 .6rem', fontSize:'1rem', color:'#fff' }}>行业资讯</h3>
-            <ul style={{ listStyle:'none', margin:0, padding:0, fontSize:'.75rem' }}>
+            <h3 style={{ margin: '0 0 .6rem', fontSize: '1rem', color: '#fff' }}>行业资讯</h3>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: '.75rem' }}>
               {industryInfoLinks.map(l => (
-                <li key={l.href} style={{ marginBottom:'.4rem' }}><Link href={l.href}>{l.label}</Link></li>
+                <li key={l.href} style={{ marginBottom: '.4rem' }}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>
+
           <div>
-            <h3 style={{ margin:'0 0 .6rem', fontSize:'1rem', color:'#fff' }}>客户案例</h3>
-            <ul style={{ listStyle:'none', margin:0, padding:0, fontSize:'.75rem' }}>
+            <h3 style={{ margin: '0 0 .6rem', fontSize: '1rem', color: '#fff' }}>客户案例</h3>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: '.75rem' }}>
               {caseLinks.map(l => (
-                <li key={l.href} style={{ marginBottom:'.4rem' }}><Link href={l.href}>{l.label}</Link></li>
+                <li key={l.href} style={{ marginBottom: '.4rem' }}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>
+
           <div>
-            <h3 style={{ margin:'0 0 .6rem', fontSize:'1rem', color:'#fff' }}>业务范围</h3>
-            <ul style={{ listStyle:'none', margin:0, padding:0, fontSize:'.75rem' }}>
+            <h3 style={{ margin: '0 0 .6rem', fontSize: '1rem', color: '#fff' }}>业务范围</h3>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: '.75rem' }}>
               {serviceLinks.map(l => (
-                <li key={l.href} style={{ marginBottom:'.4rem' }}><Link href={l.href}>{l.label}</Link></li>
+                <li key={l.href} style={{ marginBottom: '.4rem' }}><Link href={l.href}>{l.label}</Link></li>
               ))}
             </ul>
           </div>
         </div>
-        <div style={{ marginTop:'2rem', textAlign:'center', fontSize:'.65rem', color:'#90a4ae' }}>© {new Date().getFullYear()} 深圳时必达国际物流 | <Link href="/privacy-policy">隐私政策</Link> | <Link href="/terms">条款</Link></div>
+
+        <div style={{ marginTop: '2rem', textAlign: 'center', fontSize: '.65rem', color: '#90a4ae' }}>
+          © {new Date().getFullYear()} 深圳时必达国际物流 |
+          <Link href="/privacy-policy"> 隐私政策</Link> |
+          <Link href="/terms"> 条款</Link>
+        </div>
       </footer>
     </>
   );
 }
-
