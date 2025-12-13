@@ -4,7 +4,19 @@ const nextConfig = {
   experimental: {},
   async redirects() {
     // Add slug change redirects here.
-    return [];
+    return [
+      {
+      source: '/:path*',
+      has: [
+        {
+          type: 'host',
+          value: 'shipsbd.com',
+        },
+      ],
+      destination: 'https://www.shipsb.com/:path*',
+      permanent: true, // 301
+    },
+    ];
   }
 };
 
